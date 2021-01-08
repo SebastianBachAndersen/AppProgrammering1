@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Megasejapp.Contact" Title="Contact">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Kontakt mig"
+                   Padding="0,50,0,0"
+                   FontSize="30"
+                   TextColor="black"
+                   HorizontalOptions="Center"/>
+            <Entry Grid.Row="1" Placeholder="Navn"
+                HorizontalOptions="Fill"/>
+            <Entry Grid.Row="2" Placeholder="Emne"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Fill"/>
+            <Entry Grid.Row="3" Placeholder="Email"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Fill"/>
+            <Editor Grid.Row="4" 
+                    Placeholder="Skriv din besked her"
+                    AutoSize="TextChanges"/>
+            <Button Grid.Row="5"  
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    Text="Send besked"/>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

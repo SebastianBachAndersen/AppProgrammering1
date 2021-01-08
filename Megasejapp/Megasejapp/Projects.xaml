@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Megasejapp.ProjectsPage" Title="Projects">
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+            <ListView ItemsSource="{Binding Projects}" 
+                      HasUnevenRows="True"
+                      ItemTapped="OnTapped"
+                      ItemSelected="OnSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label HorizontalOptions="Start"
+                                       Text="{Binding CompanyName}"
+                                       FontSize="30"
+                                       TextColor="Black"/>
+                                <Label HorizontalOptions="Start"
+                                       Grid.Row="1"
+                                       Text="{Binding JobTitle}"/>
+                                <Label HorizontalOptions="Start"
+                                       Grid.Row="2"
+                                       Text="{Binding StartDate}"/>
+                                <Label HorizontalOptions="Start"
+                                       Grid.Row="3"
+                                       Text="{Binding EndDate}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

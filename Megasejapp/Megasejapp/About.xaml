@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Megasejapp.About" Title="About">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="me.jpg"
+               Margin="10"
+               WidthRequest="200" HeightRequest="400"/>
+            <Label Text="Sebastin Andersen" 
+                   FontSize="30"
+                   Padding="0,0,0,15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            <Label Text="Kompetencer"
+                   Padding="0,0,0,5"
+                   HorizontalOptions="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image WidthRequest="32"
+                       HeightRequest="32"
+                       Source="hashtag.png"/>
+                <Image Grid.Column="1" 
+                       WidthRequest="64" 
+                       HeightRequest="64"
+                       Source="js.png"/>
+                <Image Grid.Column="2" 
+                       WidthRequest="32" 
+                       HeightRequest="32"
+                       Source="darts.png"/>
+                <Image Grid.Column="3" 
+                       WidthRequest="32" 
+                       HeightRequest="32"
+                       Source="git.png"/>
+                <Image Grid.Column="4" 
+                       WidthRequest="32" 
+                       HeightRequest="32"
+                       Source="php.png"/>
+                
+                
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
